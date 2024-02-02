@@ -37,6 +37,10 @@ RSpec.configure do |config|
   #   puts '>>>>>>>>>> DEPOIS de TODOS os testes'
   # end
 
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures] = true
+  end
+
   config.include Helper
 
   config.expect_with :rspec do |expectations|
